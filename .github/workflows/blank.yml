@@ -45,7 +45,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-  CI:
+  CD:
     runs-on: ubuntu-latest 
     steps:
       - uses: actions/checkout@v3
@@ -57,5 +57,7 @@ jobs:
           echo "${{secrets.AWS_CREDENTIALS}}" > credentials
           ls
           aws s3 ls
+          cd ~
+          ls
           
           

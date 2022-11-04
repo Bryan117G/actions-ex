@@ -27,23 +27,18 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: 3.9
-
-      # install pip
+      
+      #Install pip
       - name: install pip
         run: |
           python -m venv env
-          source env\bin\activate
+          source env/bin/activate
           pip install -r requirements.txt
-      - name: run test
+      # Pruebas unitarias
+      - name: run tests
         run: |
-          source env\bin\activate
+          source env/bin/activate
           pytest
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
           
   CD:
     runs-on: ubuntu-latest 

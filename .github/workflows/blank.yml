@@ -53,6 +53,7 @@ jobs:
         run: |
           cd ~
           mkdir .aws
+          cd .aws
           echo "${{secrets.AWS_CREDENTIALS}}>credentials
           ls
           
